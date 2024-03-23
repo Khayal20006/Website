@@ -148,4 +148,8 @@ background: transparent;
 .btnsingin{
 	transform: translateX(270px);
 }
+.btnsingin:hover{
+background: transparent;
+
+}
 /* ---------------------buttonlar bitdi--------------------- */
