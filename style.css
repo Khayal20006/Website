@@ -8,8 +8,10 @@ text-decoration: none;
 }
 
 body{
-  font-family: sans-serif;
-  font-weight: none;
+	font-family: sans-serif;
+	font-weight: none;
+	background: #122e44;
+	background-size: cover;
 }
 
 img{
@@ -19,7 +21,7 @@ border-radius: 100px;
 }
 section{
 padding: 100px 0;
-background: #122e44;
+
 }
 .section_title{
 margin-bottom:70px ;	
@@ -84,9 +86,14 @@ background-color: #24CAAC;
 	align-items: center;
 	justify-content: space-between;
 	margin: 0 auto;
+	margin-top: 20px;
 	width: 80%;
 	color:#fff;
 }
+.c{
+	margin-right: 100px;
+}
+
 .child_anasayfa{
 flex-basis: 45%;
 }
@@ -115,33 +122,4 @@ margin-bottom: 12px;
 }
 .btn:hover{
 background: transparent;
-}
-/*--------------------------------------yazilimlar---------------------------------------------------------*/
-.Web_site_ucun_lazim_olan{
-	font-size:30px;
-	color:darkslateblue;
-    background-color:#122e44;
-    align-tracks: center;
-    margin:0 auto ;
-
-}
-.innersoftware{
-display: flex;
-align-items: right;
-width: 80%;
-justify-content: space-between;
-margin:0 auto ;
-
-}
-.innersoftware_child{
-flex-basis: 31%;
-color: #FFF;
-padding: 25px 20x;
-background: rgba(55, 66, 80, 0.281);
-border-radius: 5px;
-border: 1px solid transparent;
-transition: all .3 ease-in-out;
-}
-.innersoftware_child :hover{
-border: 1px solid #24CAAC;
 }
