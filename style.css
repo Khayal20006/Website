@@ -58,7 +58,11 @@ text-size-adjust: 40px;
 .nav_links{
 display:flex;
 }
+.nav_links li{
+	margin-right: 20px;
+}
 .nav_links li a{
+	display: block;
 	font-weight: bold;
 	font-size: 17px;
 	margin: left 22px;
@@ -67,6 +71,18 @@ display:flex;
 	border-radius: 10px;
 	transition:all .7s ease;
 }
+/* ---------------------Dropdown*------------------------*/
+
+.content{
+	border-radius: 7px;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	display: none;
+}
+#kurs:hover .content{
+	display: block;
+}
+/*---------------------------- Dropdown bitdi-------------------------- */
 .active{
 	background-color: #24CAAC;
 }
@@ -91,7 +107,11 @@ background-color: #24CAAC;
 	color:#fff;
 }
 .c{
+	margin-top: 75px;
 	margin-right: 100px;
+}
+.c h1, h3{
+	text-align: center;
 }
 
 .child_anasayfa{
@@ -109,8 +129,10 @@ color: #e0376f;
 font-size:30px;
 margin-bottom: 12px;
 }
-.btn{
-	transform: translateX(150px);
+/* --------------buttonlar------------------- */
+.btn, .btnsingin{
+	font-size: 20px;
+	transform: translateX(220px);
 	background: #24CAAC;
 	padding: 12px 28px;
 	border-radius: 20px;
@@ -123,3 +145,7 @@ margin-bottom: 12px;
 .btn:hover{
 background: transparent;
 }
+.btnsingin{
+	transform: translateX(260px);
+}
+/* ---------------------buttonlar bitdi--------------------- */
