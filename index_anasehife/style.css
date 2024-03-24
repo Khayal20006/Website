@@ -10,8 +10,9 @@ text-decoration: none;
 body{
 	font-family: sans-serif;
 	font-weight: none;
-	background: #122e44;
+	background: url(/login_page/beautiful-shining-stars-night-sky.jpg);
 	background-size: cover;
+	background-position: center;
 }
 
 img{
