@@ -1,4 +1,5 @@
 <?php
-    echo "hello world<br>";
-    echo "Mom, I did it";
+    $Ad = $_POST["Ad"];
+    $Soyad = $_POST["Soyad"];
+    echo "Xoş gəldiniz, $Ad $Soyad";
 ?>
