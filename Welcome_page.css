@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background: url(beautiful-shining-stars-night-sky.jpg);
+    height: 100vh;
+}
+.container{
+    text-align: center;
+    transform: translateY(40vh);
+}
+.container h1{
+    color: white;
+}
+.container .btn{
+    color: white;
+    font-size: 20px;
+    background: #24CAAC;
+    padding: 12px 28px;
+    border-radius: 20px;
+    border: 1px solid #24CAAC;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.btn:hover{
+    background: transparent;
+}
