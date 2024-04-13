@@ -50,7 +50,7 @@
 
         $hash = password_hash($Password, PASSWORD_DEFAULT);
         
-        $sql = "INSERT INTO users (ad, soyad, email, password) VALUE ('$Ad', '$Soyad', '$Email', '$Password')";
+        $sql = "INSERT INTO users (ad, soyad, email, password) VALUE ('$Ad', '$Soyad', '$Email', '$hash')";
         mysqli_query($conn, $sql);
 
     }

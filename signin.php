@@ -39,17 +39,26 @@
         $email = $_POST["email"];
         $password = $_POST["parol"];
 
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM users WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
-        
-        $row = mysqli_fetch_assoc($result);
-        
-        if($row["email"] == $email && $row["password"] == $password){
-            echo '<script>alert("You Logged in succesfully")</script>';
+
+        if(mysqli_num_rows($result) > 0){
+            $row = mysqli_fetch_assoc($result);
+            $isVerify = password_verify($password, $row["password"]);
+
+            if($isVerify){
+                echo '<script>alert("You Logged in succesfully")</script>';
+            }
+            else{
+                echo '<script>alert("Failed to Log in. Try again!")</script>';
+            }
         }
         else{
             echo '<script>alert("Failed to Log in. Try again!")</script>';
         }
+        
+        
+        
     }
     mysqli_close($conn);
     
