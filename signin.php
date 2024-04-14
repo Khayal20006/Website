@@ -1,3 +1,6 @@
+<?php
+    include("database.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="server.php" method="get">
+        <form action="signin.php" method="post">
             <h1>Daxil ol</h1>
             <div class="input-box">
                 <input type="email" placeholder="E-mail" name="email" required>
@@ -23,10 +26,40 @@
             </div>
             <button type="submit" class="btn">Daxil ol</button>
             <div class="hesab-yox">
-                <p>Hesabın yoxdur?<a href="signup.html">Qeydiyyatdan keç</a></p>
+                <p>Hesabın yoxdur? <a href="signup.php">Qeydiyyatdan keç</a></p>
             </div>
         </form>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
+<?php
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $email = $_POST["email"];
+        $password = $_POST["parol"];
+
+        $sql = "SELECT * FROM users WHERE email = '$email'";
+        $result = mysqli_query($conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            $row = mysqli_fetch_assoc($result);
+            $isVerify = password_verify($password, $row["password"]);
+
+            if($isVerify){
+                echo '<script>alert("You Logged in succesfully")</script>';
+            }
+            else{
+                echo '<script>alert("Failed to Log in. Try again!")</script>';
+            }
+        }
+        else{
+            echo '<script>alert("Failed to Log in. Try again!")</script>';
+        }
+        
+        
+        
+    }
+    mysqli_close($conn);
+    
+?>
